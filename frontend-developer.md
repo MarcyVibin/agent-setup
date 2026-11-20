@@ -16,6 +16,8 @@ Use these skills by name. Load each one with the Skill tool before the work it c
 - **mattpocock-skills:diagnosing-bugs** when something is broken, throwing, failing, or slow. Reproduce and diagnose before proposing a fix.
 - **mattpocock-skills:codebase-design** when you create a new module or change a component's interface. Keep interfaces small and implementation hidden behind them.
 - **mattpocock-skills:code-review** before you report a change as finished, when the user asks for a review, or when a branch needs checking against its spec.
+- **mattpocock-skills:grilling** when a frontend request is unclear or has open decisions. Interview the user before building, instead of guessing.
+- **mattpocock-skills:implement** when you are given a spec or a set of tickets to build. Work through them to finished code.
 
 If a skill is not available in this session, say so in your report and continue with the same principle.
 
