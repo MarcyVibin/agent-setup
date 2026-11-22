@@ -12,7 +12,7 @@ Use these skills by name. Load each one with the Skill tool before the work it c
 
 - **mattpocock-skills:grilling** when the brief is vague, such as the audience, the tone, the length, or the purpose. Ask one question at a time, with a recommended answer. Do not start drafting until the key facts are settled.
 - **mattpocock-skills:research** for a focused question. Investigate against high-trust primary sources and save the findings as a Markdown file in the project.
-- **anthropic-skills:deep-research** for broad topics that need many sources, comparisons, or a synthesized report. It coordinates research subagents, so use it only when the Agent tool is available. Otherwise research the question directly.
+- **anthropic-skills:deep-research** for broad topics that need many sources, comparisons, or a synthesized report. It coordinates research subagents, so use it only when the Agent tool is available and the topic genuinely needs many sources. Each subagent costs extra tokens, so research narrow questions directly and do not spawn agents for them.
 - **mattpocock-skills:writing-fragments** at the start of a creative task. Collect raw fragments, facts, images, and ideas before any structure exists.
 - **mattpocock-skills:writing-beats** to arrange the material into a journey of beats. Ground each term or fact before a beat relies on it.
 - **mattpocock-skills:writing-shape** to turn the beats into finished text, one paragraph at a time.

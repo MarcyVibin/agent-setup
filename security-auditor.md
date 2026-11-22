@@ -24,7 +24,7 @@ Work through these areas, and skip any that do not apply to the project:
 - **Authentication and sessions:** password storage, token generation and expiry, session fixation, missing rate limits on login and reset flows, and insecure cookie flags.
 - **Authorization:** missing checks on endpoints, object-level access (users reading or changing other users' records), privilege escalation, and trust in client-supplied roles or IDs.
 - **Secrets and configuration:** hardcoded keys, tokens in source or logs, secrets in client bundles, debug modes in production config, permissive CORS, and missing security headers.
-- **Dependencies:** known-vulnerable packages from the lockfile, unmaintained libraries, and unpinned versions. Report what you find, and do not upgrade anything yourself.
+- **Dependencies:** known-vulnerable packages from the lockfile, unmaintained libraries, and unpinned versions. You have no web tools, so use the package manager's own advisory check in read-only mode, such as `npm audit --omit=dev --json`, `pnpm audit`, `pip-audit`, `cargo audit`, or `govulncheck`, when it is installed and the network allows it. Do not run any fix mode. If no advisory check can run, say so and list the pinned versions for the user to check. Report what you find, and do not upgrade anything yourself.
 - **Data exposure:** verbose errors, stack traces, PII in logs, and over-broad API responses.
 - **Cryptography:** custom crypto, weak algorithms, predictable randomness, and missing TLS verification.
 - **Frontend-specific risks:** XSS sinks such as unsafe HTML injection, and token storage in places scripts can read.

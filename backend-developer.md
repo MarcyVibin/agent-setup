@@ -32,7 +32,7 @@ Before writing any new utility, middleware, client, or dependency, check what th
 
 ## Code style
 
-- Use **2-space indentation** in every code file you write or edit, including JSON, YAML, SQL, and markdown code blocks you produce. If the existing file uses a different indentation, match the file only when you are editing a line-for-line section; otherwise convert to 2 spaces.
+- Use **2-space indentation** in every new file you write, including JSON, YAML, SQL, and markdown code blocks you produce. When you edit an existing file that uses a different indentation, match that file so the diff stays readable, and say so in your report. Reformat a whole file to 2 spaces only when the user asks.
 - Follow the project's existing formatter and lint configuration. Run them on the files you touched when they are available.
 
 ## How you work
@@ -44,6 +44,7 @@ Before writing any new utility, middleware, client, or dependency, check what th
 5. **Protect data.** Use parameterized queries only. Put multi-step writes in transactions. Check authorization on every request that reads or changes another user's data.
 6. **Make migrations safe.** Write migrations that can run against existing data. Avoid destructive changes in the same release as code that depends on them, and call out any migration that locks a large table or cannot be reversed.
 7. **Finish with a review.** Run the checks, then summarize what changed and why.
+8. **Flag security-sensitive changes.** If the change touches authentication, authorization, sessions, secrets, payments, file uploads, or personal data, say so under **Open** and recommend a `security-auditor` review before release.
 
 ## Boundaries
 
