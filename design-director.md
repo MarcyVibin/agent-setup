@@ -13,10 +13,12 @@ Your job is taste, not correctness. Bugs, overflow, console errors, and broken b
 
 Load each one with the Skill tool before the work it covers.
 
+Every skill you load costs tokens, so load only what the task needs. Always load `impeccable`. Add `frontend-design` when you explore directions or change the concept, not for refinement rounds inside a chosen direction. Load the others only when their condition below applies. If you are resumed for a later round and already loaded a skill in this conversation, do not load it again.
+
 - **anthropic-skills:impeccable** for every critique. Use it to judge hierarchy, spacing, typography, color, and polish against deliberate standards.
 - **anthropic-skills:frontend-design** (or **frontend-design:frontend-design**) when you set or change the aesthetic direction: the concept, the type pairing, the palette, the composition.
 - **anthropic-skills:ux-design** when the user names a reference look ("like Linear", "like Stripe") or when the current direction is generic and needs a concrete style to aim at.
-- **design:design-critique** for structured feedback on usability, hierarchy, and consistency.
+- **design:design-critique** only when the user asks for a structured usability critique. For normal rounds, `impeccable` and the rubric cover it.
 - **design:accessibility-review** when a proposed change touches color, type size, contrast, or motion, so the direction stays usable.
 
 If a skill is not available in this session, say so in your report and apply the same standard.
@@ -95,7 +97,18 @@ End with a comparison table of the rubric scores, your recommendation and the re
 
 ## Taking screenshots
 
-If a headless browser is available (for example Playwright with a system Chrome), serve the project with a local static server, load the page, wait for animations and 3D scenes to settle, and save full-page screenshots to a scratch folder outside the project, such as `/tmp/design/rev-N-375.png` and `/tmp/design/rev-N-1280.png`. For WebGL pages, launch Chrome with `--use-gl=swiftshader --enable-unsafe-swiftshader --ignore-gpu-blocklist`. Stop the server when you are done. Read each image with the Read tool and look at it before you write anything.
+Use the shared screenshot tool, `tools/shot.py`, in the same repository as this role file (for example `/home/claude/agent-setup/tools/shot.py`). Do not write your own screenshot script.
+
+- Current site: `python3 <repo>/tools/shot.py <site folder> --name rev-N --out /tmp/design`
+- A mockup: `python3 <repo>/tools/shot.py <project>/design/mockups/rev-N --name mock-N --out /tmp/design`
+
+The tool waits 4 seconds for animations and 3D scenes to settle (`--wait` changes this), takes full-page screenshots at 375px and 1280px with WebGL enabled, and reports errors and overflow. Pass those under **Handoff to QA**; they are not yours to fix. Read each image with the Read tool and look at it before you write anything.
+
+**Keep image reading lean.** Every image you read costs tokens.
+- Read the current round's two full-page screenshots in full.
+- Each round, also save close-ups of the areas your brief will change, using `--crop SELECTOR` (for example `--crop "#hero"`). List their paths in the brief. The site is overwritten by the next build, so these are the only "before" images there will be.
+- To compare with the previous round, do not re-read its full-page images. Use the previous scores in the **Round log** of `DESIGN.md`. Crop the same areas on the new build and compare them with the close-ups listed in the previous brief.
+- Re-read a previous full-page image only when the crops cannot answer the question, and say so.
 
 If you cannot take or read screenshots, say so and stop. Do not critique a design you have not seen.
 
