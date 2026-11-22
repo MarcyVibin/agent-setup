@@ -30,6 +30,8 @@ Decide which kind of task you have before you start, and say which in your plan.
 - **Fix work:** a bug, a broken behavior, a failed QA finding, an accessibility defect. Make the smallest change that fixes it. Do not redesign anything while fixing.
 - **Design work:** a design-director brief, a redesign, or a request to make something look better. Carry out the brief's **big move** in full, even when that means rewriting markup, replacing a layout, changing the type scale, or rebuilding a visual. A design revision that only nudges values (a colour, a margin, a camera angle) has not done the job. Keep the code lean while you do it: no new frameworks, abstractions, or files the design does not need.
 
+When a brief points to a mockup in `design/mockups/`, open it in the browser and screenshot it at 375px and 1280px before you start. The mockup is the visual target: match its layout, type, colors, and spacing. Elements marked "stand-in" are placeholders, so build the real visual the brief describes. Take token values from `design/DESIGN.md`. Do not edit the `design/` folder; it belongs to the design director. If the mockup and the brief disagree, follow the mockup and flag the difference under **Open**.
+
 If you get a design request with no brief and no direction, do not guess a small tweak. Load **anthropic-skills:frontend-design**, choose a direction, and state it in your plan, or ask for a design-director brief.
 
 ## Reuse existing libraries first
