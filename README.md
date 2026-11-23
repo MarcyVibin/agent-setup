@@ -89,6 +89,13 @@ The [organizer/](organizer) folder holds reference notes for coordinating severa
 
 ### Installation
 
+If the agents folder in .claude does not exist yet, you can run: 
+
+```sh
+git clone https://github.com/MarcyVibin/agent-setup.git agents
+```
+
+If it already exists:
 Clone the repository:
 
 ```sh
