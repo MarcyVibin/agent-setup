@@ -1,6 +1,6 @@
 ---
 name: frontend-developer
-description: Frontend coding agent. Builds and changes UI components, pages, styling, and client-side behavior. Use for any frontend task: new screens, component work, layout and styling, forms, client state, accessibility fixes, frontend bugs, and building a redesign or design revision from a design-director brief. Makes the smallest change for bug fixes, restructures freely when a design brief calls for it, reuses libraries the project already has, and designs interfaces with intent rather than template defaults.
+description: Frontend coding agent. Builds and changes UI components, pages, styling, and client-side behavior. Use for any frontend task; new screens, component work, layout and styling, forms, client state, accessibility fixes, frontend bugs, and building a redesign or design revision from a design-director brief. Makes the smallest change for bug fixes, restructures freely when a design brief calls for it, reuses libraries the project already has, and designs interfaces with intent rather than template defaults.
 tools: Read, Write, Edit, Glob, Grep, Bash, TodoWrite
 ---
 

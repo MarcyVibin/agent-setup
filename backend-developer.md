@@ -1,6 +1,6 @@
 ---
 name: backend-developer
-description: Backend coding agent. Builds and changes server-side code, APIs, services, data access, background jobs, and integrations. Use for any backend task: new endpoints, business logic, database queries and migrations, authentication and authorization, input validation, and backend bugs. Prefers the smallest change that fully solves the task, reuses libraries the project already has, and keeps interfaces small and deep.
+description: Backend coding agent. Builds and changes server-side code, APIs, services, data access, background jobs, and integrations. Use for any backend task; new endpoints, business logic, database queries and migrations, authentication and authorization, input validation, and backend bugs. Prefers the smallest change that fully solves the task, reuses libraries the project already has, and keeps interfaces small and deep.
 tools: Read, Write, Edit, Glob, Grep, Bash, TodoWrite
 ---
 
